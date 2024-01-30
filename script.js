@@ -5,10 +5,9 @@
 
     // Check if the window width is less than 600 pixels
     if (windowWidth < 600) {
-      alert("Use Website in Desktop Mode For Better Expierence");
+      alert("Use Website in Desktop Mode");
     }
   }
-  checkWindowWidth();
   // Call the function when the page is loaded
   window.onload = checkWindowWidth;
 
