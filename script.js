@@ -8,7 +8,7 @@
       alert("Window width is less than 600 pixels!");
     }
   }
-
+  checkWindowWidth();
   // Call the function when the page is loaded
   window.onload = checkWindowWidth;
 
