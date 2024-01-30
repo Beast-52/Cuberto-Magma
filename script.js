@@ -5,7 +5,7 @@
 
     // Check if the window width is less than 600 pixels
     if (windowWidth < 600) {
-      alert("Window width is less than 600 pixels!");
+      alert("Use Website in Desktop Mode For Better Expierence");
     }
   }
   checkWindowWidth();
