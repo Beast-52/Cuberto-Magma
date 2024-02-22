@@ -1,5 +1,33 @@
+let tl = gsap.timeline();
+
+function run(){
+  tl.to("#bolt-path", {
+    delay:1,
+    strokeDasharray: 600,
+    duration: 2,
+  });
+  tl.to("#bolt-rect", {
+    duration: 2,
+    y: 0,
+  });
+  tl.to(".loader-inner", {
+    scale: 0,
+  });
+  tl.repeat(-1)
+  tl.repeatDelay(1)
+}
+run()
 function loader(){
-  document.querySelector('.loader').classList.add('hidden')
+  
+  gsap.to(".panel", {
+    y: "-100%",
+    duration: 2,
+    stagger: 0.3,
+  });
+  gsap.to(".loader", {
+    y: "-100%",
+  });
+  
 }
 const loco = ()=>{
   gsap.registerPlugin(ScrollTrigger);
@@ -141,9 +169,9 @@ var data = `
 ./img/frames00199.png
 ./img/frames00202.png
 `;
-return data.split("\n")[index];
-}
 
+return imageUrls = data.split("\n")[index]
+}
 const frameCount = 67;
 
 const images = [];
