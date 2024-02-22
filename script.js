@@ -185,7 +185,7 @@ img.src = files(i);
 img.onload = function() {
   loadedCount++;
   if (loadedCount === imageUrls.length) {
-      loader(); // Call loader function when all images are loaded
+      
   }
 };
 images.push(img);
