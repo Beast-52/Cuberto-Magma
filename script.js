@@ -19,12 +19,12 @@ function run(){
 run()
 function loader(){
   
-  gsap.to(".panel", {
+  tl.to(".panel", {
     y: "-100%",
-    duration: 2,
+    duration: 1,
     stagger: 0.3,
   });
-  gsap.to(".loader", {
+  tl.to(".loader", {
     y: "-100%",
   });
   
