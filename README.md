@@ -31,6 +31,3 @@ The purpose of this project is to showcase how to create an animated website wit
 
 Feel free to customize the JavaScript section in `index.html` to create your own animations and adapt the website to your specific requirements.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
