@@ -1,3 +1,5 @@
+window.addEventListener('load',()=>{
+  document.querySelector('.loader').classList.add('hidden')
 
 const loco = ()=>{
   gsap.registerPlugin(ScrollTrigger);
@@ -636,4 +638,5 @@ gsap.to('.page7-cir-inner',{
     scrub:.5
   },
   backgroundColor:`#0a3bce91`
+})
 })

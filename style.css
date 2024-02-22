@@ -16,8 +16,38 @@ body {
   overflow-x: hidden;
   background-color: var(--primary-color);
 }
+.loader{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  z-index: 99999;
+  background-color: var(--primary-color);
+
+}
+.loader::after{
+  content: '';
+  width: 75px;
+  height: 75px;
+  border:15px solid #dadada;
+  position: absolute;
+  border-top-color: #02268e;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%,-50%);
+  animation: loader 0.86s infinite;
+}
+@keyframes loader {
+  100%{
+    transform: translate(-50%,-50%) rotate(360deg);
+  }
+}
 #main {
   position: relative;
+}
+.hidden{
+  display: none;
 }
 #page1 {
   height: 100vh;
