@@ -1,3 +1,16 @@
+ // Function to check window width and display alert
+  function checkWindowWidth() {
+    // Get the width of the browser window
+    var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+    // Check if the window width is less than 600 pixels
+    if (windowWidth < 600) {
+      alert("Use Website in Desktop Mode");
+    }
+  }
+  // Call the function when the page is loaded
+  window.onload = checkWindowWidth;
+
 const loco = ()=>{
   gsap.registerPlugin(ScrollTrigger);
 
