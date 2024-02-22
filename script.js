@@ -1,6 +1,6 @@
-window.addEventListener('load',()=>{
+function loader(){
   document.querySelector('.loader').classList.add('hidden')
-
+}
 const loco = ()=>{
   gsap.registerPlugin(ScrollTrigger);
 
@@ -150,10 +150,16 @@ const images = [];
 const imageSeq = {
 frame: 1,
 };
-
+let loadedCount = 0;
 for (let i = 0; i < frameCount; i++) {
 const img = new Image();
 img.src = files(i);
+img.onload = function() {
+  loadedCount++;
+  if (loadedCount === imageUrls.length) {
+      loader(); // Call loader function when all images are loaded
+  }
+};
 images.push(img);
 }
 
@@ -638,5 +644,4 @@ gsap.to('.page7-cir-inner',{
     scrub:.5
   },
   backgroundColor:`#0a3bce91`
-})
 })
