@@ -184,9 +184,7 @@ const img = new Image();
 img.src = files(i);
 img.onload = function() {
   loadedCount++;
-  if (loadedCount === imageUrls.length) {
-      
-  }
+ 
 };
 images.push(img);
 }
