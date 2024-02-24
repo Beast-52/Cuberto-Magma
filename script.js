@@ -30,7 +30,7 @@ function loader(){
   });
   
 }
-const loco = ()=>{
+const loco = (multiplier = 1)=>{
   gsap.registerPlugin(ScrollTrigger);
 
 // Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
@@ -39,7 +39,8 @@ const locoScroll = new LocomotiveScroll({
   el: document.querySelector('#main'),
   smooth: true,
   inertia: 0.8,
-  smoothMobile: true
+  smoothMobile: true,
+  multiplier: multiplier
 });
 // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
 locoScroll.on("scroll", ScrollTrigger.update);
@@ -65,7 +66,17 @@ ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
 ScrollTrigger.refresh();
 }
-loco();
+// loco();
+let userAgent = navigator.userAgent.toLowerCase();
+let isMobile = /iphone|ipad|ipod|android|blackberry|windows phone/i.test(userAgent);
+// isMobile = window.innerWidth <= 768;
+
+
+if (isMobile) {
+  loco(4);
+} else {
+  loco();
+}
 
 var clutter = '';
 
