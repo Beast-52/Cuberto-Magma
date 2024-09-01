@@ -500,6 +500,15 @@ width: 30vmax;
 .page14-inner:hover .center14{
   height: 100%;
 }
+footer{
+  height:10vh;
+  display:grid;
+  place-items:center;
+  background:#0f0f17;
+}
+footer p span{
+    font-style: italic;
+}
 @media (max-width:600px) {
   nav img {
     width: 120px;
