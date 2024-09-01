@@ -506,7 +506,7 @@ footer{
   place-items:center;
   background:#0f0f17;
   color:white;
-  font-size:3vw;
+  font-size:2vmax;
 }
 footer p span{
     font-style: italic;
