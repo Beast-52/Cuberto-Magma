@@ -501,12 +501,12 @@ width: 30vmax;
   height: 100%;
 }
 footer{
-  height:10vh;
+  height:12vh;
   display:grid;
   place-items:center;
   background:#0f0f17;
   color:white;
-  font-size:2vmax;
+  font-size:1.6vmax;
 }
 footer p span{
     font-style: italic;
